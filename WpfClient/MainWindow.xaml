@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfClient.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WpfClient"     
+    Title="WPF ImageService client" Height="600" Width="600" ResizeMode="NoResize" Closing="Window_Closing">
+    <Window.DataContext>
+        <local:DataGridModel></local:DataGridModel>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <DataGrid AutoGenerateColumns="False" Name="imageFilesGrid"  ItemsSource="{Binding ImagesFileData}" CanUserResizeRows="False" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserDeleteRows="False" CanUserAddRows="False" CanUserSortColumns="False" IsReadOnly="True" SelectionMode="Single" VerticalScrollBarVisibility="Auto" MouseDoubleClick="imageFilesGrid_MouseDoubleClick_1">
+                <DataGrid.DataContext>
+                    <local:DataGridModel/>
+                </DataGrid.DataContext>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Image" Width="5*" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=FileName}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Date of last modifyed" Width="5*" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=LastDateModified}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <StackPanel Name="buttonsStackPanel"  Grid.Column="1" Grid.Row="0">
+            <Button Height="30" Width="100" Margin="30,30,30,0"  Name="UpdateButton" Content="Update" Click="UpdateButton_Click"></Button>
+            <Button Height="30" Width="100" Margin="30,10,30,0" Name="UploadButton" Content="Upload"  Click="UploadButton_Click"></Button>
+            <Button Height="30" Width="100" Margin="30,10,30,0" Name="ResetConnectionButton" Content="Reset connection" Click="ResetConnectionButton_Click"></Button>
+        </StackPanel>
+        
+        <StackPanel Name="ImageViewerStackPanel"  Grid.Row="1" Grid.ColumnSpan="2">
+            <Image Name="ImageViewer1" Stretch="Fill"/>
+        </StackPanel>
+    </Grid>
+</Window>

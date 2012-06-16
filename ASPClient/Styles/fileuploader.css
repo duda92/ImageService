@@ -1,0 +1,32 @@
+
+.qq-uploader 
+{ 
+    position:relative; 
+    width: 100%;
+}
+
+.qq-upload-button {
+    width: 120px; 
+    height: 28px;   
+    text-align:center;    
+    background:transparent url('button_background.jpg'); 
+    font-family: serif;
+	line-height: 100%;
+	vertical-align: middle;
+    color:Black;
+    font-weight:bold; 
+    font-size:medium;
+    
+}
+.qq-upload-button-hover 
+{
+    background-color:White; 
+    color:Black;
+    font-weight:bold;    
+    font-size:large;
+}
+
+.uploadLabel
+{
+    line-height:25px;
+}

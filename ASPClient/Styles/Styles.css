@@ -1,0 +1,114 @@
+﻿#ImagePanel, #Image1
+{
+    height: 600px;
+    width:  800px;
+}
+#GridViewPanel
+{
+    width:  600px;
+    height: 600px;
+}
+#GridView1
+{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 100%;
+    height:100%; 
+}       
+#UploadButton, #UpdateButton, #ResetCnnectionButton
+{
+    width : 100%;
+    height: 100%;
+}
+
+tr.selected_table_item td{
+  background-color:Blue;
+  color:White;
+} 
+
+.site_button
+{
+    cursor: pointer; 
+    background:transparent url('button_background.jpg'); 
+    font-family: serif;
+	line-height: 100%;
+	text-align: center;
+	vertical-align: middle; 
+    color:Black;
+    font-weight:bold; 
+    font-size:medium;
+}
+
+.site_button_mouse_over
+{
+    cursor: pointer; 
+    background-color:White; 
+    color:Black;
+    font-weight:bold;    
+    font-size:large;
+}
+
+body
+{
+    background-image: url('main_background.jpg');    
+}
+
+.panel_bottom
+{
+    bottom:0px;    
+}
+
+#panel_div
+{
+    width : 300px;
+    height: 400px;
+}
+
+#UploadPanelContent
+{
+     height:65%;
+}
+
+#ok_cancel_part_OfUploadPanel
+{
+    height:35%;
+}
+
+#UploadPanelCancel, UploadPanelSubmit
+{
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:10%;   
+}
+
+#FileUploadControl
+{   
+    margin-top:10%;
+    margin-left:10%;
+}
+
+.HeaderImagesGrid
+{
+    background-image: url('table_header.jpg');
+    color:White;   
+    font-size:medium; 
+}
+
+.Row
+{
+    color:White; 
+    background-image: url('NickelGray.jpg');
+}
+
+
+.scroll-pane
+{
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+}
+.horizontal-only
+{
+	height: auto;
+	max-height: 200px;
+}
